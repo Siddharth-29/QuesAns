@@ -16,6 +16,18 @@
     <%= form.text_field :content %>
   </div>
 
+# ----------------------------------------
+  <h3> Add Feedback</h3>
+  <%= form.fields_for :feedbacks do |feedback| %>
+    <%= render 'feedback_fields', f: feedback %>
+    <h1>hello</h1>
+  <% end %>
+
+    <div class="links">
+  <%= link_to_add_association "Add Feedback", form, :feedbacks %>
+    </div>
+  <br>
+  
   <div class="actions">
     <%= form.submit %>
   </div>

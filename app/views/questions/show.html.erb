@@ -5,5 +5,14 @@
   <%= @question.content %>
 </p>
 
+<h3>Feedback</h3>
+<ul>
+  <% for @feedback in @question.feedbacks %>
+    <li>
+      <%= @feedback.feed%>
+    </li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_question_path(@question) %> |
 <%= link_to 'Back', questions_path %>
