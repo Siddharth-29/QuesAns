@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  # acts_as_paranoid
+  acts_as_paranoid
 
   has_many :questions
   has_many :answers
