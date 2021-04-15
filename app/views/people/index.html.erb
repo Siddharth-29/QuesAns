@@ -1,0 +1,20 @@
+<br><br>
+<%= link_to "Create New User", new_person_path %>
+<br><br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    <% @people.each do |p|%>
+        <tr>
+        <td> <%= p[:id] %> </td>
+        <td> <%= p[:name] %> </td>
+        <td> <%= p[:desc] %> </td>
+
+       <td> <%= link_to "Edit", edit_person_path(p[:id]) %> </td>
+       <td> <%= link_to "Delete", person_path(p[:id]), method: :delete %> </td>
+        <tr>
+    <% end %>
+</table>

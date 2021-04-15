@@ -1,0 +1,5 @@
+<%= form_tag person_path, method: :put do%>
+    name : <%=  text_field_tag :name, @people[:name] %><br>
+    desc : <%= text_field_tag :desc, @people[:desc] %><br>
+    <%= submit_tag "Update"%>
+<% end %>
